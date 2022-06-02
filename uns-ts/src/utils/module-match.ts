@@ -7,12 +7,15 @@
 // 例子：type p = Promise<'guang'>; 提取Promise返回值类型
 type GetPromiseValue<T> = T extends Promise<infer K> ? K : never;
 type getPromiseRes = GetPromiseValue<Promise<"guang">>; // 'guang'
-
+const str: getPromiseRes = 'guang';
+console.log('str: ' + str);
 /**
  * 可以将模式匹配应用到数组，字符串，函数，构造器类型等应用中
  */
 
 // Array类型
-
+// 提取数组第一个元素的类型
+type FirstItemType<T extends unknown[]> = T extends [infer K, ...unknown[]]? K : never;
+type GetFirstType = FirstItemType<['1', 1, 2, false]>; // '1'
 
 export {};
