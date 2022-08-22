@@ -5,13 +5,13 @@
  * Uncapitalize: 去掉首字母大写
  */
 
-type UppercaseRes = Uppercase<'abc'>; // ABC
+export type UppercaseRes = Uppercase<'abc'>; // ABC
 
-type LowercaseRes = Lowercase<'ABC'>; // abc
+export type LowercaseRes = Lowercase<'ABC'>; // abc
 
-type CapitalizeRes = Capitalize<'abc'>; // Abc
+export type CapitalizeRes = Capitalize<'abc'>; // Abc
 
-type UncapitalizeRes = Uncapitalize<'Abc'>; // abc
+export type UncapitalizeRes = Uncapitalize<'Abc'>; // abc
 
 /**
  * 源码：
